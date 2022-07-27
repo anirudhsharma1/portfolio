@@ -3,7 +3,7 @@ import './index.scss'
 const Logo = () => {
   return (
     <div>
-      <img />
+      <img alt="logo" />
     </div>
   )
 }
