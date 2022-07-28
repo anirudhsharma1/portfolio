@@ -1,30 +1,10 @@
-import "./index.scss";
-import LogoS from "../../../assets/images/logo-s1.png";
-import { useEffect, useRef } from "react";
-import DrawSVGPlugin from "gsap-trial/DrawSVGPlugin";
-import gsap from "gsap-trial";
+import './index.scss'
+import LogoS from '../../../assets/images/logo-s1.png'
 
 const Logo = () => {
-  const bgRef = useRef();
-  const outlineLogoRef = useRef();
-  const solidLogoRef = useRef();
-  // useEffect(() => {
-  //   gsap.registerPlugin(DrawSVGPlugin);
-  //   gsap
-  //     .timeline()
-  //     .to(bgRef.current, {
-  //       duration: 1,
-  //       opacity: 1,
-  //     })
-  //     .from(outlineLogoRef.current, {
-  //       drawSVG: 0,
-  //       duration: 20,
-  //     });
-  // }, []);
-
   return (
-    <div className="logo-container" ref={bgRef}>
-      <img ref={solidLogoRef} className="solid-logo" src={LogoS} alt="s" />
+    <div className="logo-container">
+      <img className="solid-logo" src={LogoS} alt="s" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -45,7 +25,6 @@ const Logo = () => {
         </defs>
         <g clipPath="url(#id1)" className="svg-container">
           <path
-            ref={outlineLogoRef}
             strokeLinecap="butt"
             transform="matrix(0.75, 0, 0, 0.75, -13.500295, -16.910554)"
             fill="none"
@@ -59,6 +38,6 @@ const Logo = () => {
         </g>
       </svg>
     </div>
-  );
-};
-export default Logo;
+  )
+}
+export default Logo
