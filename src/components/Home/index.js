@@ -1,41 +1,41 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import LogoTitle from "../../assets/images/logo-s1.png";
-import "./index.scss";
-import AnimatedLetters from "../AnimatedLetters";
-import Logo from "./Logo";
-import Loader from "react-loaders";
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import LogoTitle from '../../assets/images/logo-s1.png'
+import './index.scss'
+import AnimatedLetters from '../AnimatedLetters'
+import Logo from './Logo'
+import Loader from 'react-loaders'
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState("text-animate");
-  const nameArray = ["n", "i", "r", "u", "d", "h"];
+  const [letterClass, setLetterClass] = useState('text-animate')
+  const nameArray = ['n', 'i', 'r', 'u', 'd', 'h']
   const jobArray = [
-    "S",
-    "o",
-    "f",
-    "t",
-    "w",
-    "a",
-    "r",
-    "e",
-    "",
-    "D",
-    "e",
-    "v",
-    "e",
-    "l",
-    "o",
-    "p",
-    "e",
-    "r",
-    ".",
-  ];
+    'S',
+    'o',
+    'f',
+    't',
+    'w',
+    'a',
+    'r',
+    'e',
+    '',
+    'D',
+    'e',
+    'v',
+    'e',
+    'l',
+    'o',
+    'p',
+    'e',
+    'r',
+    '.',
+  ]
 
   useEffect(() => {
     setTimeout(() => {
-      return setLetterClass("text-animate-hover");
-    }, 4000);
-  }, []);
+      return setLetterClass('text-animate-hover')
+    }, 4000)
+  }, [])
   return (
     <>
       <div className="container home-page">
@@ -59,7 +59,7 @@ const Home = () => {
               idx={22}
             />
           </h1>
-          <h2>Full Stack Devloper / Mern Stack / Python / YouTuber</h2>
+          <h2>Full Stack Devloper / Mern Stack / Python / C++ / YouTuber</h2>
           <h3>Work in progress...</h3>
           <Link to="/contact" className="flat-button">
             CONTACT ME
@@ -69,6 +69,6 @@ const Home = () => {
       </div>
       <Loader type="pacman" />
     </>
-  );
-};
-export default Home;
+  )
+}
+export default Home
